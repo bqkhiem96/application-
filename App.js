@@ -9,7 +9,9 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View
+    View,
+    NativeModules,
+    Button
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -24,13 +26,16 @@ export default class App extends Component < Props > {
     render() {
         return (
             <View>
-                <Text>Bui Quoc Khiem ne cac ban</Text>
+                <Button
+                    onPress={() => NativeModules.MeshModule.onStart()}
+                    title='Call Hype from JS'
+                />
             </View>
         )
     }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({  
     container: {
         flex: 1,
         justifyContent: 'center',
