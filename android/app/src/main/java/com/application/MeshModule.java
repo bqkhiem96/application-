@@ -79,6 +79,7 @@ public class MeshModule extends ReactContextBaseJavaModule implements StateObser
     }
 
     @Override
+    @ReactMethod
     public void onStart(Hype hype) {
         Log.i(TAG, "Hype started!");
     }
